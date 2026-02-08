@@ -1,68 +1,131 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
-  margin: 0;
+  background: #151925;
+  color: white;
+}
+
+#main-header {
+  max-width: 40rem;
+  margin: 2rem auto 4rem auto;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  gap: 2rem;
+  color: #c1d9fa;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#main-header img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+#main-header h1,
+#main-header p {
+  margin: 0;
+}
+
+main {
+  max-width: 40rem;
+  margin: 2rem auto;
+}
+
+.accordion {
+  margin: 2rem 0;
+  border: 1px solid #5d6273;
+  border-radius: 6px;
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-item {
+  background-color: #1e2130;
+}
+
+.accordion-item-title {
+  margin: 0;
+  padding: 1rem;
+  background-color: #363e57;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-size: 1.15rem;
+  color: #c1d9fa;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.accordion-item-content {
+  display: none;
+  padding: 1rem;
+  background-color: #2c344a;
+}
+
+.open {
+  display: block;
+}
+
+.searchable-list {
+  margin: 2rem 0;
+}
+
+.searchable-list input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #5d6273;
+  border-radius: 6px;
+  background-color: #1e2130;
+  color: white;
+  font: inherit;
+}
+
+.searchable-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.place {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.place img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.place h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #faf489;
+}
+
+.place p {
+  margin: 0.5rem 0;
+  color: #b3b5c6;
+}
+
+#travel-demo button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e2130;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+#travel-demo button:hover,
+#travel-demo button:active {
+  background-color: #363e57;
 }
