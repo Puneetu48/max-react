@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import { AccordionContext } from './accordion-context';
+import AccordionItem from './AccordionItem';
+import AccordionTitle from './AccordionTitle';
+import AccordionContent from './AccordionContent';
 
 function Accordion({ children, className }) {
   const [openItemId, setOpenItemId] = useState();
-  function openItem(id) {
-    setOpenItemId(id);
-  }
-  function closeItem() {
-    setOpenItemId(null);
+
+  function toggleItem(id) {
+    setOpenItemId((prevId) => (prevId === id ? null : id));
   }
 
   const contextValue = {
     openItemId,
-    openItem,
-    closeItem,
+    toggleItem,
   };
 
   return (
@@ -22,5 +22,9 @@ function Accordion({ children, className }) {
     </AccordionContext.Provider>
   );
 }
+
+Accordion.Item = AccordionItem;
+Accordion.Title = AccordionTitle;
+Accordion.Content = AccordionContent;
 
 export default Accordion;
