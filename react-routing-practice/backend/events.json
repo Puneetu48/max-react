@@ -1,11 +1,1 @@
-{
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
-}
+{"events":[{"title":"A brand new event","image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhgwczY8uFac77ydbCxBt4htfaBYWVnJfBzg&s","date":"2026-03-04","description":"Disco event","id":"f77ba94f-46de-4e3a-a31e-5d13513dabeb"},{"title":"New Event ","image":"https://img.freepik.com/free-photo/professional-equipment-camera-tripod-stand-field-front-prepared-table-evening-time_146671-14420.jpg?semt=ais_rp_progressive&w=740&q=80","date":"2026-03-04","description":"A new event","id":"15866d48-a0d8-4fa5-afb4-3828f209ff81"},{"title":"A dummy event","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","date":"2026-02-24","description":"Join this amazing event and connect with fellow developers.","id":"e1"}]}
