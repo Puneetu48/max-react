@@ -5,7 +5,7 @@ import express from 'express';
 
 const app = express();
 
-app.use(express.static('backend/images'));
+app.use(express.static('images'));
 app.use(bodyParser.json());
 
 // CORS
@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/places', async (req, res) => {
-  const fileContent = await fs.readFile('./backend/data/places.json');
+  const fileContent = await fs.readFile('./data/places.json');
 
   const placesData = JSON.parse(fileContent);
 
@@ -27,7 +27,7 @@ app.get('/places', async (req, res) => {
 });
 
 app.get('/user-places', async (req, res) => {
-  const fileContent = await fs.readFile('./backend/data/user-places.json');
+  const fileContent = await fs.readFile('./data/user-places.json');
 
   const places = JSON.parse(fileContent);
 
@@ -37,7 +37,7 @@ app.get('/user-places', async (req, res) => {
 app.put('/user-places', async (req, res) => {
   const places = req.body.places;
 
-  await fs.writeFile('./backend/data/user-places.json', JSON.stringify(places));
+  await fs.writeFile('./data/user-places.json', JSON.stringify(places));
 
   res.status(200).json({ message: 'User places updated!' });
 });
